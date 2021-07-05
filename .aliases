@@ -1,0 +1,7 @@
+
+# Custom Aliases
+alias tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
+alias tmd='~/tmux-scripts/tmux.split.dev.sh'
+alias tmk='tmux kill-session'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
