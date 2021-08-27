@@ -1,0 +1,16 @@
+
+function tmd() {
+    
+    tmux new-session -d -s dev
+    tmux split-window -v -p 10
+    tmux select-pane -t 1
+    tmux attach-session -t dev
+}
+
+
+# Aliases
+alias dataloader='java -cp ~/Chris-Work-Laptop/FlowBuilders/work-apps/dataloader/dataloader_v44/dataloader-44.0.0-uber-patched.jar com.salesforce.dataloader.process.DataLoaderRunner'
+alias tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
+alias tmk='tmux kill-session'
+alias goProjects='cd $HOME/side-projects'
+alias goWork='cd $HOME/Chris-Work-Laptop/FlowBuilders'

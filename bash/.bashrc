@@ -120,7 +120,6 @@ fi
 
 # General os init commands
 eval "$(ssh-agent -s)"
-echo "Adding rsa key to agent for greenwoodc repo"
 ssh-add ~/.ssh/chris_git_rsa
 clear
 
