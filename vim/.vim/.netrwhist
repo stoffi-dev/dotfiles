@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/chris/.dotfiles'
+let g:netrw_dirhist_1='/home/chris/.dotfiles/.git'
 let g:netrw_dirhist_0='/home/chris/side-projects/training-go-microservices/handlers'
 let g:netrw_dirhist_9='/home/chris/side-projects/training-go-microservices/data'
 let g:netrw_dirhist_8='/home/chris/side-projects/training-go-microservices/handlers'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_6='/home/chris/side-projects/go/intro_to_microservices/produ
 let g:netrw_dirhist_5='/home/chris/side-projects/go/intro_to_microservices/product-api/data'
 let g:netrw_dirhist_4='/home/chris'
 let g:netrw_dirhist_3='/home/chris/tmux-scripts'
-let g:netrw_dirhist_2='/home/chris'
-let g:netrw_dirhist_1='/home/chris/tmux-scripts'
