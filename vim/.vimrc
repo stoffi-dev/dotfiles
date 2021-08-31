@@ -18,10 +18,14 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
+    Plug 'morhetz/gruvbox'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'dikiaap/minimalist'
+    Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
         
 colorscheme gruvbox
+"colorscheme minimalist
 set background=dark
 
 " General Settings
@@ -62,12 +66,34 @@ autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
 " External config sources
 " source ~/.vim/config/autoclosing.vim
 
+filetype plugin indent on
+set autowrite
+
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Status line types / signatures
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1
+
+
 " Key remappings
 let mapleader = " "
 nnoremap <C-J> <C-W><C-J> 
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+au filetype go inoremap <buffer> . .<C-x><C-o>
+
 
 " Behave like other capitals
 nnoremap Y y$
