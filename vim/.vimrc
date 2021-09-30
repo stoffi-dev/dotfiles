@@ -50,6 +50,9 @@ set signcolumn=yes
 set splitbelow
 set splitright
 
+" Clipboard copy settings
+set clipboard=unnamedplus
+
 " Give more space for displaying messages.
 set cmdheight=2
 
@@ -92,7 +95,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-au filetype go inoremap <buffer> . .<C-x><C-o>
+au filetype go inoremap <leader>a <C-x><C-o>
 
 
 " Behave like other capitals
