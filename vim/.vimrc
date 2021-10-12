@@ -20,7 +20,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-    Plug 'dikiaap/minimalist'
+"    Plug 'dikiaap/minimalist'
     Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
         
@@ -32,7 +32,7 @@ set background=dark
 
 set nocompatible
 syntax on
-
+set laststatus=2
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 highlight Cursor guifg=green
@@ -68,6 +68,7 @@ autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
 
 " External config sources
 " source ~/.vim/config/autoclosing.vim
+source ~/.vim/config/statusline.vim
 
 filetype plugin indent on
 set autowrite
