@@ -2,7 +2,7 @@
 
 
 pushd $DOTFILES
-for folder in $(echo $STOWFOLDERS | sed "s/,/ /g")
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
     echo "Installing $folder"
     stow -D $folder
