@@ -11,7 +11,10 @@ return require('packer').startup(function()
   use 'monsonjeremy/onedark.nvim'
   use {
     'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    requires = {'kyazdani42/nvim-web-devicons', opt = false}
+  }
+  require('nvim-web-devicons').setup {
+      default = true;
   }
   require('lualine').setup {
     options = {
@@ -22,3 +25,5 @@ return require('packer').startup(function()
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
 end)
+
+
