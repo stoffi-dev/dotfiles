@@ -68,7 +68,7 @@ autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
 
 " External config sources
 " source ~/.vim/config/autoclosing.vim
-source ~/.vim/config/statusline.vim
+" source ~/.vim/config/statusline.vim
 
 filetype plugin indent on
 set autowrite
