@@ -15,7 +15,7 @@ return require('packer').startup(function()
   }
   require('lualine').setup {
     options = {
-      theme = 'onedark'
+      theme = 'material'
       -- ... your lualine config
     }
   }
