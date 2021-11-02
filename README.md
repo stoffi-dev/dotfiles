@@ -1,13 +1,6 @@
 ## Description 
 
-This vimrc will auto install vim-plug package manager + any packages that are referenced in the .vimrc file.
-
-Currently plugins included are:
-
-- Gruvbox colorscheme
-- Minimalist colorscheme
-- CRTLP
-- go-vim
+This repo holds all my dotfile configuration.
 
 ## Installation
 
