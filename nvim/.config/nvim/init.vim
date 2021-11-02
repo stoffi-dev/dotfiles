@@ -4,12 +4,19 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'joshdick/onedark.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'marko-cerovac/material.nvim'
 call plug#end()
 
 " Lua requires
 lua require("init")
 
-colorscheme onedark
+"lua << EOF
+"vim.lsp.set_log_level("debug")
+"EOF
+
+"colorscheme onedark
+colorscheme material
 
 " General Settings
 set nocompatible
@@ -44,6 +51,9 @@ set updatetime=50
 " Dont pass messages to |ins-completion-menu|
 set shortmess+=c
 
+" LSP config
+source ~/.config/nvim/lua/lsp/lsp-config.vim
+
 " File type specifics
 autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
@@ -56,7 +66,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 au filetype go inoremap <leader>a <C-x><C-o>
-
 
 " Behave like other capitals
 nnoremap Y y$
