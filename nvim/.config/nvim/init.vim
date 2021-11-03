@@ -53,6 +53,8 @@ set shortmess+=c
 
 " LSP config
 source ~/.config/nvim/lua/lsp/lsp-config.vim
+source ~/.config/nvim/syntax/apex.vim
+au BufRead,BufNewFile *.cls set filetype=apex
 
 " File type specifics
 autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
