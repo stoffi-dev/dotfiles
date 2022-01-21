@@ -5,7 +5,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export DOTFILES="$HOME/.dotfiles"
-export STOWFOLDERS="nvim,vim,zsh,tmux"
+export STOWFOLDERS="vim,nvim,zsh,tmux,alacritty"
 export NODE\_OPTIONS=--experimental-worker
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
