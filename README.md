@@ -40,17 +40,17 @@ This will complete the plugin installation.
 Inside the .dotfiles directory
 
 ```
-        chmod +x ./clean-env
+    chmod +x ./clean-env
 ```
 ```
-        ./clean-env
+    ./clean-env
 ```
 
 This will uninstall all stow links in your local system.
 
 ### Manually
 
-    Use the command: 
+Use the command: 
 
 ```
    stow -D <folder name>
