@@ -37,7 +37,7 @@ This will complete the plugin installation.
 
 ### Automatically
 
-    Inside the .dotfiles directory
+Inside the .dotfiles directory
 
 ```
         chmod +x ./clean-env
