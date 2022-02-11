@@ -2,14 +2,12 @@
 
 # Path additions
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
 export PYROOT=/usr/local/python3
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/sfdx/bin
 export PATH=$PATH:$PYROOT
 export PATH=$PATH:/home/chris/.local/bin
+export PATH=$PATH:/usr/local/go/bin
 
 function tmd() {
     
