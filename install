@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
 
+STOWFOLDERS="vim,nvim,zsh,tmux,alacritty"
+
 pushd $DOTFILES
 for folder in $(echo $STOWFOLDERS | sed "s/,/ /g")
 do

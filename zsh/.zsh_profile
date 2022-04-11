@@ -1,10 +1,10 @@
 
 
 # Path additions
-export GOPATH=$HOME/go
+export GOPATH=$HOME/.config/go
 export PYROOT=/usr/local/python3
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/sfdx/bin
+export PATH=$PATH:$HOME/.config/sfdx/bin
 export PATH=$PATH:$PYROOT
 export PATH=$PATH:/home/chris/.local/bin
 export PATH=$PATH:/usr/local/go/bin
@@ -23,6 +23,7 @@ alias dataloader='java -cp ~/Chris-Work-Laptop/FlowBuilders/work-apps/dataloader
 alias tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 #alias tmd=tmd()
 alias tmk='tmux kill-session'
-alias gosp='cd $HOME/side-projects'
-alias gofbp='cd $HOME/fb-projects'
+alias gosp='cd $HOME/projects/side-projects'
+alias gofbp='cd $HOME/projects/fb-projects'
 alias gowork='cd $HOME/Chris-Work-Laptop/FlowBuilders'
+alias obsidian='$HOME/bin/Obsidian.AppImage'

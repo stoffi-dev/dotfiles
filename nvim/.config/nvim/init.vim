@@ -7,6 +7,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'marko-cerovac/material.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " Lua requires
@@ -71,6 +72,19 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
 
+" Markdown Preview Settings
+let g:mkdp_auto_close = 0
+"let g:mkdp_browser = 'firefox'
+let g:mkdp_echo_preview_url = 1
+
+function! g:Open_browser(url)
+  exec "Start! firefox --new-window " . a:url
+  " Alternatively, without vim-dispatch
+  "silent exec "firefox --new-window " . a:url . " &"
+endfunction
+let g:mkdp_browserfunc = 'g:Open_browser'
+
+nnoremap <C-m> :MarkdownPreview<CR>
 " Key remappings
 let mapleader = " "
 nnoremap <C-J> <C-W><C-J> 
