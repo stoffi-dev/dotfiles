@@ -58,4 +58,6 @@ Use the command:
 
 This will uninstall the particular folder in .dotfiles directory from your system.
 
-## Coming soon
+
+### Dependencies
+

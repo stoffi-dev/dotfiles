@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 
-STOWFOLDERS="nvim,zsh,alacritty"
+STOWFOLDERS="awesome,nvim,zsh,alacritty"
 
 pushd $DOTFILES
 for folder in $(echo $STOWFOLDERS | sed "s/,/ /g")
