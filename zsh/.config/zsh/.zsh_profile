@@ -38,3 +38,8 @@ alias dl55='java -jar $HOME/bin/dataloader-v55.0.0/dataloader-55.0.0-uber.jar'
 alias dl54='java -jar $HOME/bin/dataloader-v54.0.0/dataloader-54.0.0-uber.jar'
 alias anypoint='$HOME/bin/AnypointStudio/AnypointStudio'
 alias v='nvim'
+
+# Startup
+if [[ -z $DISPLAY ]]; then
+	startx
+fi
