@@ -142,6 +142,7 @@ keys.globalkeys = gears.table.join(
       end,
       {description = "open a terminal", group = "launcher"}
    ),
+
    -- launch rofi
    awful.key({modkey}, "d",
       function()
@@ -149,6 +150,18 @@ keys.globalkeys = gears.table.join(
       end,
       {description = "application launcher", group = "launcher"}
    ),
+
+    -- Dmenu
+    awful.key({ modkey },            "r",     function ()
+    awful.util.spawn("dmenu_run") end,
+              {description = "run dmenu", group = "stoffi"}
+    ),
+
+    -- Brave
+    awful.key({ modkey },            "b",     function ()
+    awful.util.spawn("brave") end,
+              {description = "run browser", group = "stoffi"}
+    ),
 
    -- =========================================
    -- FUNCTION KEYS

@@ -33,14 +33,14 @@ apps = {
    launcher = "rofi -normal-window -modi drun -show drun -theme " .. theme_config_dir .. "rofi.rasi",
    lock = "i3lock",
    screenshot = "scrot -e 'mv $f ~/Pictures/ 2>/dev/null'",
-   filebrowser = "nautilus"
+   filebrowser = "thunar"
 }
 
 -- define wireless and ethernet interface names for the network widget
 -- use `ip link` command to determine these
 network_interfaces = {
    wlan = 'wlp58s0',
-   lan = 'enp1s0'
+   lan = 'enp42s0'
 }
 
 -- List of apps to run on start-up

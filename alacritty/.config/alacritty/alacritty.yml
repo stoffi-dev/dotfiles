@@ -9,7 +9,10 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/nord.yml
+  #- ~/.config/alacritty/nord.yml
+  #- ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/monokai_charcoal.yml
+    #- ~/.config/alacritty/solarized_dark.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -46,11 +49,11 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 3
-    y: 3
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
+  dynamic_padding: false
 
   # Window decorations
   #
@@ -111,7 +114,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: "FiraCode Nerd Font"
+    family: "FiraCode Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Retina
@@ -150,7 +153,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -165,12 +168,6 @@ font:
   #glyph_offset:
   #  x: 0
   #  y: 0
-
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`.
-  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
