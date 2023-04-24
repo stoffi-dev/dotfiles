@@ -9,6 +9,7 @@ export PATH=$PATH:$PYROOT
 export PATH=$PATH:/home/chris/.local/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/opt/maven/apache-maven-3.8.5/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 function tmd() {
     
