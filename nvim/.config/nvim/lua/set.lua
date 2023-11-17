@@ -1,3 +1,4 @@
+
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
@@ -39,3 +40,5 @@ vim.filetype.add({
         apex = 'apex',
     }
 })
+
+

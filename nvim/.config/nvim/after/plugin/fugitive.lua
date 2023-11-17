@@ -1,1 +1,11 @@
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+-- = opens change
+-- s stages change
+-- u unstages change
+-- cc starts commit and you can enter comment, closing will commit the changes
+--
+-- gq quits pane
+-- gd opens change on line
+-- dv opens change on line in vertical split
+-- dq closes pane with new change
+--

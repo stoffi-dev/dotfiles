@@ -12,51 +12,30 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use ({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
-
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
   use ('nvim-treesitter/playground')
   use ('theprimeagen/harpoon')
   use ('mbbill/undotree')
   use ('tpope/vim-fugitive')
-  use 'monsonjeremy/onedark.nvim'
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use 'marko-cerovac/material.nvim'
-  use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v2.x',
-      requires = {
-        -- LSP Support
-        {'neovim/nvim-lspconfig'},             -- Required
-        {                                      -- Optional
-          'williamboman/mason.nvim',
-          run = function()
-            pcall(vim.cmd, 'MasonUpdate')
-          end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
+  use 'navarasu/onedark.nvim'
+      require('onedark').setup {
+          style = 'darker'
       }
-  }
-
+  
+  use  {
+      "loctvl842/monokai-pro.nvim", config = function()
+        require("monokai-pro").setup()
+      end
+    }
+  use 'marko-cerovac/material.nvim'
+  use 'neovim/nvim-lspconfig'
+  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = false}
-  }
-  require('nvim-web-devicons').setup {
+  } require('nvim-web-devicons').setup {
       default = true;
-  }
-  require('lualine').setup {
+  } require('lualine').setup {
     options = {
         icons_enabled = true,
         theme = 'material',
