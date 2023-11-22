@@ -6,12 +6,29 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use { 'williamboman/mason.nvim',
+    requires = {"williamboman/mason-lspconfig.nvim",
+    }
+  }
+
+  use {'neovim/nvim-lspconfig',
+      requires = {"hrsh7th/cmp-nvim-lsp"}
+  }
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use {"hrsh7th/nvim-cmp",
+    requires = {
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz1/cmp_luasnip",
+        "rafamadriz/friendly-snippets",
+    }
+}
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
   use ('nvim-treesitter/playground')
   use ('theprimeagen/harpoon')
@@ -28,7 +45,6 @@ return require('packer').startup(function(use)
       end
     }
   use 'marko-cerovac/material.nvim'
-  use 'neovim/nvim-lspconfig'
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
   use {
     'nvim-lualine/lualine.nvim',
