@@ -15,8 +15,8 @@ export LATESTPROJDIR=/home/cg
 
 function tmd() {
     tmux new-session -d -s dev
-    tmux split-window -v -p 10
-    tmux select-pane -t 1
+    tmux split-window -h -p 10
+    tmux select-pane -t 0
     tmux attach-session -t dev
 }
 
