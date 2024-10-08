@@ -1,3 +1,3 @@
 require('keymappings')
-require('plugins')
+require('config.lazy')
 require('set')
