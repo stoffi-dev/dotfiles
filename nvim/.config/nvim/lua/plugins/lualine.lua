@@ -1,48 +1,50 @@
 return {
     'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', lazy = true, opt = false}
-  } require('nvim-web-devicons').setup {
-      default = true;
-  } require('lualine').setup {
-    options = {
-        icons_enabled = true,
-        theme = 'material',
-        component_separators = { left = '|', right = '|'},
-        section_separators = { left = '', right = ''},
-        disabled_filetypes = {},
-        always_divide_middle = true,
-    },
-    sections = {
-        lualine_a = {'mode'},
-        lualine_b = {
-                {'branch'},
-                {'diff',
-                    colored = true,
-                    diff_color = {
-                        added = nil,
-                        modified = nil,
-                        removed = nil,
+    dependencies = {'nvim-tree/nvim-web-devicons'},
+    opts = function()
+        return {
+
+            require('lualine').setup {
+                    options = {
+                        icons_enabled = true,
+                        theme = 'material',
+                        component_separators = { left = '|', right = '|'},
+                        section_separators = { left = '', right = ''},
+                        disabled_filetypes = {},
+                        always_divide_middle = true,
                     },
-                    symbols = {
-                        added = '+',
-                        modified = '~',
-                        removed = '-'
+                    sections = {
+                        lualine_a = {'mode'},
+                        lualine_b = {
+                                {'branch'},
+                                {'diff',
+                                    colored = true,
+                                    diff_color = {
+                                        added = nil,
+                                        modified = nil,
+                                        removed = nil,
+                                    },
+                                    symbols = {
+                                        added = '+',
+                                        modified = '~',
+                                        removed = '-'
+                                    }
+                                },
+                                {'diagnostics', sources={'nvim_lsp', 'coc'}}
+                            },
+                        lualine_c = {
+                            {
+                                'filename',
+                                file_status = true,
+                                path = 1,
+                                shorting_target = 40
+                            }
+                        },
+                        lualine_x = {'encoding', 'filetype'},
+                        lualine_y = {'progress'},
+                        lualine_z = {'location'}
                     }
-                },
-                {'diagnostics', sources={'nvim_lsp', 'coc'}}
-            },
-        lualine_c = {
-            {
-                'filename',
-                file_status = true,
-                path = 1,
-                shorting_target = 40
+                }
             }
-        },
-        lualine_x = {'encoding', 'filetype'},
-        lualine_y = {'progress'},
-        lualine_z = {'location'}
-    }
-    
-    }
+        end
 }
