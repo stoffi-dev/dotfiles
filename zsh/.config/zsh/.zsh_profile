@@ -4,14 +4,13 @@
 export GOPATH=$HOME/.config/go
 export PYROOT=/usr/local/python3
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/.config/sfdx/bin
 export PATH=$PATH:$PYROOT
 export PATH=$PATH:/home/chris/.local/bin
 export PATH=$PATH:$HOME/.local/bin/ffuf
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/opt/maven/apache-maven-3.8.5/bin
-export PATH=$PATH:$HOME/.cargo/bin
-export LATESTPROJDIR=/home/cg
+export PATH=$PATH:/usr/local/bin/zig
+export LATESTPROJDIR=/home/cg/projects/websites/bare-necessities-website
 
 function tmd() {
     tmux new-session -d -s dev
@@ -27,20 +26,20 @@ function acp() {
 }
 
 function cpd() {
-    sed -i 's/^export LATESTPROJDIR=.+/export LATESTPROJDIR=$1/' ~/.config/zsh/.zsh_profile
+    dir=`pwd`
+    str=${dir//\//\\/}
+    sed -i 's/^export LATESTPROJDIR=.*/export LATESTPROJDIR='$str'/' $HOME/.config/zsh/.zsh_profile
+    echo "Updated reference: "$str
+    source $HOME/.config/zsh/.zsh_profile
 }
 
 # Aliases
-alias dataloader='java -cp ~/Chris-Work-Laptop/FlowBuilders/work-apps/dataloader/dataloader_v44/dataloader-44.0.0-uber-patched.jar com.salesforce.dataloader.process.DataLoaderRunner'
 alias tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 alias gosp='cd $HOME/projects/side-projects'
 alias gofbp='cd $HOME/projects/fb-projects/internal-projects'
 alias gofbpc='cd $HOME/projects/fb-projects/customer-projects'
 alias gowork='cd $HOME/Chris-Work-Laptop/FlowBuilders'
 alias obsidian='$HOME/bin/Obsidian.AppImage'
-alias dl55='java -jar $HOME/bin/dataloader-v55.0.0/dataloader-55.0.0-uber.jar'
-alias dl54='java -jar $HOME/bin/dataloader-v54.0.0/dataloader-54.0.0-uber.jar'
-alias anypoint='$HOME/bin/AnypointStudio/AnypointStudio'
 alias v='nvim'
 
 # Alias' desktop only
