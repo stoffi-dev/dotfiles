@@ -4,14 +4,13 @@
 export GOPATH=$HOME/.config/go
 export PYROOT=/usr/local/python3
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/.config/sfdx/bin
 export PATH=$PATH:$PYROOT
 export PATH=$PATH:/home/chris/.local/bin
 export PATH=$PATH:$HOME/.local/bin/ffuf
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/opt/maven/apache-maven-3.8.5/bin
-export PATH=$PATH:$HOME/.cargo/bin
-export LATESTPROJDIR=/home/cg/projects/games/ebitengine_prac/polygons
+export PATH=$PATH:/usr/local/bin/zig
+export LATESTPROJDIR=/home/cg/projects/websites/bare-necessities-website
 
 function tmd() {
     tmux new-session -d -s dev
